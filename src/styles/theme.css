@@ -1,0 +1,120 @@
+:root {
+  --font-size: 17px;
+  --background: #FAF7F2;
+  --foreground: #1C1917;
+  --card: #FFFFFF;
+  --card-foreground: #1C1917;
+  --popover: #FFFFFF;
+  --popover-foreground: #1C1917;
+  --primary: #1C1917;
+  --primary-foreground: #FAF7F2;
+  --secondary: #9E7B3B;
+  --secondary-foreground: #FFFFFF;
+  --muted: #EFE8DB;
+  --muted-foreground: #57534E;
+  --accent: #856428;
+  --accent-foreground: #FFFFFF;
+  --destructive: #6D2128;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(41, 37, 36, 0.12);
+  --input: transparent;
+  --input-background: #FFFFFF;
+  --switch-background: #9E7B3B;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #9E7B3B;
+  --chart-1: #9E7B3B;
+  --chart-2: #6D2128;
+  --chart-3: #57534E;
+  --chart-4: #D8C7A5;
+  --chart-5: #292524;
+  --radius: 0.25rem;
+
+  /* Vintage & Museum Color Palette */
+  --vintage-cream: #FAF7F2;
+  --vintage-paper: #F4EFE6;
+  --vintage-sepia: #78716C;
+  --vintage-bronze: #9E7B3B;
+  --vintage-gold: #B5914A;
+  --vintage-metal: #57534E;
+  --vintage-burgundy: #6D2128;
+  --vintage-dark: #1C1917;
+  --vintage-dark-card: #26221E;
+  --vintage-shadow: rgba(28, 25, 23, 0.08);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-size: var(--font-size);
+    line-height: 1.65;
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
+  html {
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', 'Libre Baskerville', Georgia, serif;
+    letter-spacing: -0.01em;
+    color: var(--foreground);
+  }
+
+  p {
+    font-family: 'Cormorant Garamond', 'Libre Baskerville', Georgia, serif;
+  }
+}
+
+/* Clases de impresión de ficha museográfica */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
