@@ -10,11 +10,11 @@ export function BrandsSection() {
   return (
     <div>
       <div className="text-center mb-12">
-        <h2 className="mb-4 text-[var(--vintage-dark)] text-3xl md:text-4xl font-medium">
-          Garantía & Confianza
+        <h2 className="mb-4 text-[var(--vintage-dark)] text-3xl md:text-4xl font-bold tracking-tight">
+          Amor por la Tierra, el Cosmos y las Manos
         </h2>
-        <p className="text-[var(--vintage-metal)] max-w-2xl mx-auto text-sm md:text-base">
-          Respaldamos cada una de nuestras piezas únicas con estándares excepcionales de calidad y autenticidad.
+        <p className="text-[var(--vintage-metal)] max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+          Artesanía chilena nacida en el Centro Cultural GAM: aros, collares y pulseras con piedras vivas, inspiradas en los ciclos naturales y el respeto por el oficio manual.
         </p>
       </div>
 
@@ -29,16 +29,16 @@ export function BrandsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`p-6 rounded border flex flex-col justify-between shadow-sm ${
+              className={`p-6 rounded-2xl border-2 flex flex-col justify-between shadow-sm transition-all duration-200 hover:-translate-y-0.5 ${
                 item.highlight
-                  ? 'bg-[var(--vintage-gold)]/10 border-[var(--vintage-gold)] border-2'
-                  : 'bg-[var(--vintage-cream)] border-[var(--vintage-bronze)]/30'
+                  ? 'bg-[var(--vintage-gold)]/10 border-dashed border-[var(--vintage-gold)]'
+                  : 'bg-[var(--vintage-cream)] border-dashed border-[var(--vintage-bronze)]/40 hover:border-[var(--vintage-gold)]/70'
               }`}
             >
               <div>
                 <div className="flex items-center gap-2 mb-3">
                   <Icon className={`w-5 h-5 ${item.highlight ? 'text-[var(--vintage-gold)]' : 'text-[var(--vintage-bronze)]'}`} />
-                  <h3 className={`font-semibold text-sm ${
+                  <h3 className={`font-semibold text-sm tracking-tight ${
                     item.highlight ? 'text-[var(--vintage-gold)]' : 'text-[var(--vintage-dark)]'
                   }`}>
                     {item.name}
@@ -53,15 +53,15 @@ export function BrandsSection() {
         })}
       </div>
 
-      <div className="mt-8 p-6 bg-[var(--vintage-dark)] text-[var(--vintage-cream)] rounded-lg border border-[var(--vintage-gold)]/20 shadow">
-        <div className="flex items-start gap-4">
-          <HeartHandshake className="w-6 h-6 text-[var(--vintage-gold)] flex-shrink-0 mt-1" />
+      <div className="mt-8 p-6 sm:p-8 bg-[var(--vintage-dark)] text-[var(--vintage-cream)] rounded-2xl border-2 border-dashed border-[var(--vintage-gold)]/35 shadow-xl relative overflow-hidden">
+        <div className="flex items-start gap-4 relative z-10">
+          <HeartHandshake className="w-7 h-7 text-[var(--vintage-gold)] flex-shrink-0 mt-1" />
           <div>
-            <h4 className="mb-2 text-[var(--vintage-gold)] font-medium text-lg">
-              Compromiso de Sostenibilidad
+            <h4 className="mb-2 text-[var(--vintage-gold)] font-bold text-lg tracking-tight">
+              Filosofía del Buen Vivir & Tiempo Sagrado
             </h4>
-            <p className="text-xs text-[var(--vintage-sepia)] leading-relaxed">
-              Creemos en una joyería ética y consciente. Al adquirir nuestras antigüedades o piezas restauradas, extiendes el ciclo de vida de obras orfebres de enorme valor histórico, reduciendo el impacto ambiental de la minería de metales nuevos.
+            <p className="text-xs sm:text-sm text-[var(--vintage-cream)]/85 leading-relaxed">
+              Sentimos la artesanía como un diálogo con la naturaleza: las manos tejen, los metales de alpaca se templan y las piedras de cuarzo y calipso conectan con la energía de quien las porta. Una forma de vivir en armonía con los ciclos del cosmos, la siembra y el rescate paciente de objetos con historia.
             </p>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { Phone, MapPin, Mail, Sparkles, Feather, Gem, Clock, Wrench } from 'lucide-react';
+import { Phone, MapPin, Mail, Sparkles, Feather, Gem, Wrench } from 'lucide-react';
 import { motion } from 'motion/react';
 import { lazy, Suspense } from 'react';
 import { WhatsAppButton } from './components/whatsapp-button';
@@ -91,35 +91,35 @@ export default function App() {
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center gap-2 mb-4 text-[var(--vintage-gold)]">
               <Sparkles className="w-4 h-4" />
-              <span className="text-xs uppercase tracking-widest font-typewriter">
-                Oficio, Historia & Calidez
+              <span className="text-xs uppercase tracking-widest font-sans">
+                Oficio, Cosmos & Sabiduría de la Tierra
               </span>
             </div>
             <motion.h2
-              className="mb-4 text-3xl sm:text-4xl md:text-5xl font-cinzel font-bold text-[var(--vintage-cream)]"
+              className="mb-4 text-3xl sm:text-4xl md:text-5xl font-sans font-bold tracking-tight text-[var(--vintage-cream)]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              ¿Tienes una idea o pieza especial en mente?
+              ¿Sientes la llamada de una joya creada para ti?
             </motion.h2>
-            <p className="text-base sm:text-lg text-[var(--vintage-sepia)] mb-8 max-w-2xl mx-auto font-cormorant">
-              Hacemos tapices de macramé a medida, aros personalizados en alpaca, búsquedas de antigüedades y mantención de tu máquina de escribir. Contáctanos directamente.
+            <p className="text-base sm:text-lg text-[var(--vintage-cream)]/85 mb-8 max-w-2xl mx-auto font-sans leading-relaxed">
+              Creamos aros en alpaca, collares y pulseras con piedras de cuarzo y calipso a tu medida, inspiradas en los ciclos de la tierra y el calendario maya. También realizamos mantención paciente a máquinas de escribir queridas. ¡Conversemos!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#catalogo"
-                className="px-8 py-4 bg-[var(--vintage-gold)] text-[var(--vintage-dark)] rounded hover:bg-[var(--vintage-bronze)] hover:text-[var(--vintage-cream)] transition-colors cursor-pointer font-typewriter font-semibold text-xs sm:text-sm tracking-wider uppercase shadow-lg"
+                className="px-8 py-4 bg-[var(--vintage-gold)] text-[var(--vintage-dark)] font-semibold rounded-xl hover:bg-[var(--vintage-bronze)] transition-all cursor-pointer font-sans text-xs sm:text-sm tracking-wider uppercase shadow-lg"
               >
-                Ver Catálogo Disponible
+                Ver Creaciones Disponibles
               </a>
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-transparent border-2 border-[var(--vintage-cream)]/50 rounded hover:bg-[var(--vintage-cream)]/10 transition-colors flex items-center justify-center gap-2 font-typewriter text-xs sm:text-sm tracking-wider uppercase"
+                className="px-8 py-4 bg-transparent border-2 border-dashed border-[var(--vintage-cream)]/50 rounded-xl hover:bg-[var(--vintage-cream)]/10 transition-all flex items-center justify-center gap-2 font-sans text-xs sm:text-sm tracking-wider uppercase"
               >
-                <span>Escribir por WhatsApp</span>
+                <span>Escribir a la Artesana</span>
                 <Phone className="w-4 h-4 text-[var(--vintage-gold)]" />
               </a>
             </div>
@@ -132,38 +132,38 @@ export default function App() {
             <div className="grid md:grid-cols-4 gap-8 mb-10">
               {/* Col 1 */}
               <div className="md:col-span-1">
-                <h3 className="text-[var(--vintage-gold)] font-cinzel text-lg font-bold mb-3">
+                <h3 className="text-[var(--vintage-gold)] font-sans text-lg font-bold mb-3 tracking-tight">
                   {BUSINESS_CONFIG.name}
                 </h3>
-                <p className="text-[var(--vintage-sepia)] text-xs font-cormorant leading-relaxed mb-4">
-                  Taller artesanal dedicado a la creación manual en Macramé, aritos y orfebrería en Alpaca, curaduría de antigüedades y servicio técnico de máquinas de escribir.
+                <p className="text-[var(--vintage-cream)]/80 text-xs font-sans leading-relaxed mb-4">
+                  Taller artesanal dedicado a la creación de aros, collares y pulseras en alpaca, macramé, piedras calipso y cuarzos, inspirado en los ciclos de la tierra, el cosmos y la mantención con cariño de máquinas de escribir.
                 </p>
-                <span className="text-[11px] text-[var(--vintage-gold)]/80 font-typewriter block">
-                  Ubicados en los Locales Artesanales del GAM.
+                <span className="text-[11px] text-[var(--vintage-gold)]/90 font-sans block">
+                  Ubicados en los Locales Artesanales del GAM, Santiago.
                 </span>
               </div>
 
               {/* Col 2 */}
               <div>
-                <h4 className="text-[var(--vintage-cream)] text-xs uppercase tracking-widest font-typewriter font-semibold mb-3 border-b border-[var(--vintage-bronze)]/30 pb-2">
+                <h4 className="text-[var(--vintage-cream)] text-xs uppercase tracking-widest font-sans font-semibold mb-3 border-b border-[var(--vintage-bronze)]/30 pb-2">
                   Especialidades
                 </h4>
-                <ul className="text-[var(--vintage-sepia)] text-xs space-y-2 font-typewriter">
+                <ul className="text-[var(--vintage-cream)]/80 text-xs space-y-2 font-sans">
                   <li className="flex items-center gap-1.5 hover:text-[var(--vintage-gold)] transition-colors">
-                    <Feather className="w-3 h-3 text-[var(--vintage-gold)]" />
-                    <span>Macramé & Fibras Naturales</span>
+                    <Gem className="w-3.5 h-3.5 text-[var(--vintage-gold)]" />
+                    <span>Aros & Joyas en Alpaca y Cobre</span>
                   </li>
                   <li className="flex items-center gap-1.5 hover:text-[var(--vintage-gold)] transition-colors">
-                    <Gem className="w-3 h-3 text-[var(--vintage-gold)]" />
-                    <span>Aritos & Joyas en Alpaca</span>
+                    <Sparkles className="w-3.5 h-3.5 text-[var(--vintage-gold)]" />
+                    <span>Piedras Calipso & Cuarzo Cristal</span>
                   </li>
                   <li className="flex items-center gap-1.5 hover:text-[var(--vintage-gold)] transition-colors">
-                    <Clock className="w-3 h-3 text-[var(--vintage-gold)]" />
-                    <span>Reventa de Antigüedades</span>
+                    <Feather className="w-3.5 h-3.5 text-[var(--vintage-gold)]" />
+                    <span>Cosmos, Tierra & Calendario Maya</span>
                   </li>
                   <li className="flex items-center gap-1.5 hover:text-[var(--vintage-gold)] transition-colors">
-                    <Wrench className="w-3 h-3 text-[var(--vintage-gold)]" />
-                    <span>Mantención Máquinas de Escribir</span>
+                    <Wrench className="w-3.5 h-3.5 text-[var(--vintage-gold)]" />
+                    <span>Rescate de Máquinas de Escribir</span>
                   </li>
                 </ul>
               </div>

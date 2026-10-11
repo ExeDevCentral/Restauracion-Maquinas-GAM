@@ -11,10 +11,10 @@ interface DiagnosisItem {
 }
 
 interface DiagnosisSectionProps {
-  hasImages: boolean;
+  readonly hasImages?: boolean;
 }
 
-export function DiagnosisSection({ hasImages }: DiagnosisSectionProps) {
+export function DiagnosisSection({ hasImages = false }: DiagnosisSectionProps) {
   const [showConfetti, setShowConfetti] = useState(false);
   const [scanning, setScanning] = useState(false);
 
@@ -67,11 +67,11 @@ export function DiagnosisSection({ hasImages }: DiagnosisSectionProps) {
     return (
       <div className="text-center py-16 px-4">
         <Sparkles className="w-12 h-12 mx-auto mb-4 text-[var(--vintage-bronze)] animate-pulse" />
-        <h3 className="mb-2 text-[var(--vintage-dark)] text-xl font-medium">
-          Tasación & Diagnóstico Online
+        <h3 className="mb-2 text-[var(--vintage-dark)] text-xl font-bold tracking-tight">
+          Consulta & Asesoría del Taller
         </h3>
-        <p className="text-[var(--vintage-metal)] max-w-md mx-auto text-sm">
-          Sube fotografías en alta definición de tu joya, antigüedad o máquina de escribir para que nuestros artesanos realicen un análisis preliminar de su estado y potencial de restauración.
+        <p className="text-[var(--vintage-metal)] max-w-md mx-auto text-sm leading-relaxed">
+          ¿Tienes una joya con piedras para ajustar o una máquina de escribir que desees cuidar? Conversemos directamente para valorar sus materiales y dar nueva vida a tus piezas.
         </p>
       </div>
     );

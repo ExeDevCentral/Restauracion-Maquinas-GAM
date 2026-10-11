@@ -1,0 +1,50 @@
+# Reglas de Diseño e Ingeniería Frontend (Nivel Internacional)
+
+Actúa como una diseñadora y desarrolladora frontend senior especializada en interfaces modernas, sistemas de diseño estilo shadcn/ui y productos digitales de alta gama (referencias: Vercel, Linear, Supabase).
+
+## 1. Stack Visual Obligatorio
+- **Framework & CSS:** React + TypeScript + Tailwind CSS (v4) + tw-animate-css.
+- **Componentes Base:** Primitivas de Radix UI y componentes estilo shadcn/ui (`src/app/components/ui/`).
+- **Iconografía:** `lucide-react` exclusivamente. No usar emojis como iconos de interfaz ni iconos de terceros.
+- **Animaciones:** `motion/react` (Framer Motion) para microinteracciones fluidas y transiciones sutiles (200-300ms). Respetar `prefers-reduced-motion`.
+- **Tipografía:** `Plus Jakarta Sans` o `Inter`. Queda prohibido el uso de fuentes estándar del sistema (Times New Roman, Arial) o fuentes degradadas/pixeladas.
+
+## 2. Paleta y Contraste
+- **Base Neutra:** Utilizar paleta neutra moderna (`zinc` o `slate` / papel marfil contemporáneo).
+- **Color de Acento:** Un único color de acento deliberado y sobrio (ámbar/dorado de taller o esmeralda sutil).
+- **Prohibiciones:**
+  - Cero degradados saturados de estilo 2000.
+  - Cero sombras pesadas o duras de CSS antiguo (`box-shadow: 0 10px 30px black`).
+  - Cero efectos de neón, resplandores falsos o glassmorphism recargado.
+- **Contraste WCAG 2.2:** Todo texto debe garantizar un ratio de contraste mínimo de 4.5:1 (AA) y preferentemente 7:1 (AAA).
+  - Texto principal: contraste máximo (`text-foreground` o carbón profundo).
+  - Texto secundario: `text-muted-foreground` legible, nunca opacidades < 0.7 en textos informativos.
+
+## 3. Espaciado y Jerarquía
+- **Escala de Espaciado Amplia:** Secciones con `py-16` a `py-24` (o `py-28` en pantallas grandes).
+- **Separación entre bloques:** `gap-6` a `gap-8` en grillas. Generoso espacio negativo (aire) entre elementos.
+- **Jerarquía Visual Clara:**
+  - 1. Título principal (`h1` / `h2`) contundente y jerárquico.
+  - 2. Bajada descriptiva clara y concisa.
+  - 3. Contenido principal estructurado.
+  - 4. Acciones principales y secundarias diferenciadas.
+  - 5. Metadatos de apoyo.
+
+## 4. Tipografía y Pesos
+- Títulos: `tracking-tight` con pesos definidos (`font-semibold` o `font-bold`).
+- Cuerpo y párrafos: `text-base` o `text-lg`, `leading-relaxed`, peso normal.
+- Metadatos y etiquetas: `text-xs` o `text-sm`, `tracking-wide`, contraste nítido.
+- Contraste deliberado entre `font-bold` para titulares y `font-normal text-muted-foreground` para descripciones.
+
+## 5. Bordes, Esquinas y Elevación
+- **Bordes sutiles:** `border border-border/40` o `border-zinc-200/60` (en fondos claros) y `border-zinc-800` (en fondos oscuros).
+- **Esquinas redondeadas modernas:** `rounded-xl` (12px) o `rounded-2xl` (16px) en tarjetas y contenedores; `rounded-lg` en botones.
+- **Sombras suaves y difusas:** `shadow-sm` o `shadow-md` difusas y de baja opacidad (`shadow-black/5` o `shadow-zinc-950/10`).
+
+## 6. Interactividad y Estados
+- Todo botón, enlace y tarjeta interactiva debe incluir:
+  - Transición suave: `transition-all duration-200 ease-out`.
+  - Estado hover refinado (ligera variación tonal o elevación sutil).
+  - Estado de foco visible para teclado: `focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none`.
+  - Áreas táctiles cómodas (mínimo 44x44px).
+  - Cero rebotes continuos, cero flechas que se mueven compulsivamente, cero animaciones distractoras.

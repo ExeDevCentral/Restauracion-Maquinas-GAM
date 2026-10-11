@@ -12,10 +12,10 @@ export function ProductGrid() {
   const [searchQuery, setSearchQuery] = useState<string>('');
 
   const categories = [
-    { id: 'todos', name: 'Todos' },
-    { id: 'artesanias', name: 'Artesanías' },
-    { id: 'antiguedades', name: 'Antigüedades' },
-    { id: 'maquinas', name: 'Máquinas' },
+    { id: 'todos', name: 'Todo el Taller' },
+    { id: 'artesanias', name: 'Aros & Collares con Piedras' },
+    { id: 'antiguedades', name: 'Amuletos & Antigüedades' },
+    { id: 'maquinas', name: 'Máquinas Restauradas' },
   ];
 
   const filteredProducts = useMemo(() => {
@@ -38,15 +38,15 @@ export function ProductGrid() {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 mb-3 text-[var(--vintage-bronze)]">
             <Sparkles className="w-5 h-5 animate-pulse" />
-            <span className="text-sm font-semibold tracking-wider uppercase font-typewriter">
-              Catálogo Exclusivo
+            <span className="text-sm font-semibold tracking-wider uppercase font-sans">
+              Creaciones del Taller GAM
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl text-[var(--vintage-dark)] mb-4">
-            Nuestras Piezas Seleccionadas
+          <h2 className="text-4xl md:text-5xl text-[var(--vintage-dark)] font-bold tracking-tight mb-4">
+            Aros, Collares & Piedras Hechas a Mano
           </h2>
-          <p className="text-[var(--vintage-metal)] max-w-xl mx-auto">
-            Artesanías, antigüedades y máquinas de escribir restauradas. Cada pieza cuenta una historia única.
+          <p className="text-[var(--vintage-metal)] max-w-xl mx-auto font-sans leading-relaxed">
+            Piedras calipso, cuarzos naturales y orfebrería en alpaca nacidas con amor por la tierra, junto a piezas nobles con memoria.
           </p>
         </div>
 

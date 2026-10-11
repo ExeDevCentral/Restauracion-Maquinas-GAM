@@ -1,9 +1,7 @@
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Sparkles, Compass, HeartHandshake } from 'lucide-react'
 import { motion, useScroll, useTransform } from 'motion/react'
 import { ParticleField } from '../effects/ParticleField'
 import { TypewriterText } from '../effects/TypewriterText'
-import { AnimatedCounter } from '../effects/AnimatedCounter'
-import { MagneticButton } from '../effects/MagneticButton'
 import { useRef, useState, useEffect } from 'react'
 import { buildWhatsAppUrl } from '../../utils/whatsapp'
 import { BUSINESS_CONFIG } from '../../config/business'
@@ -34,13 +32,13 @@ export function HeroSection() {
 
   const whatsappUrl = buildWhatsAppUrl(
     BUSINESS_CONFIG.phone,
-    '¡Hola! Quiero restaurar mi máquina de escribir. ¿Me pueden dar más información?'
+    '¡Hola! Me encantaría consultar por tus aros, collares y artesanías con piedras naturales.'
   )
 
   return (
     <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <motion.div className="absolute inset-0 z-0" style={{ y: bgY, scale: bgScale }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-[var(--vintage-dark)]/80 via-[var(--vintage-dark)]/60 to-[var(--vintage-paper)] z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--vintage-dark)]/90 via-[var(--vintage-dark)]/80 to-[var(--vintage-dark)]/95 z-10" />
         <motion.img
           src="https://images.unsplash.com/photo-1641985899378-990ae6eb3c11?w=1920&auto=format"
           srcSet="https://images.unsplash.com/photo-1641985899378-990ae6eb3c11?w=480&auto=format 480w, https://images.unsplash.com/photo-1641985899378-990ae6eb3c11?w=800&auto=format 800w, https://images.unsplash.com/photo-1641985899378-990ae6eb3c11?w=1200&auto=format 1200w, https://images.unsplash.com/photo-1641985899378-990ae6eb3c11?w=1920&auto=format 1920w"
@@ -61,12 +59,12 @@ export function HeroSection() {
         {isVisible && (
           <>
             <motion.div
-              className="absolute top-20 left-10 w-40 h-40 border-2 border-[var(--vintage-gold)]/15 rounded-full"
+              className="absolute top-20 left-10 w-40 h-40 border-2 border-dashed border-[var(--vintage-gold)]/20 rounded-full"
               animate={{ rotate: 360 }}
               transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
             />
             <motion.div
-              className="absolute bottom-40 right-20 w-64 h-64 border border-[var(--vintage-bronze)]/10"
+              className="absolute bottom-40 right-20 w-64 h-64 border border-dashed border-[var(--vintage-bronze)]/15 rounded-full"
               animate={{ rotate: -360 }}
               transition={{ duration: 80, repeat: Infinity, ease: 'linear' }}
             />
@@ -74,65 +72,62 @@ export function HeroSection() {
         )}
       </div>
 
-      <motion.div style={{ opacity }} className="relative z-20 max-w-4xl mx-auto px-6 text-center">
+      <motion.div style={{ opacity }} className="relative z-20 w-full max-w-4xl mx-auto px-4 sm:px-6 text-center pt-24 sm:pt-32 pb-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-block mb-6 px-4 py-2 bg-[var(--vintage-gold)]/20 backdrop-blur-sm border border-[var(--vintage-gold)]/30 rounded">
-            <span className="text-[var(--vintage-cream)] text-sm font-typewriter">
-              ARTESANÍAS · ANTIGÜEDADES · MÁQUINAS DE ESCRIBIR
+          <div className="inline-block mb-6 px-4 py-1.5 bg-[var(--vintage-gold)]/15 backdrop-blur-sm border-2 border-dashed border-[var(--vintage-gold)]/40 rounded-full">
+            <span className="text-[var(--vintage-cream)] text-xs sm:text-sm font-sans tracking-wide">
+              ✦ Artesanía Chilena Hecha a Mano · Piedras & Cuarzos · Cosmos & Tierra ✦
             </span>
           </div>
 
           <TypewriterText
-            text="Tres oficios, un legado"
-            speed={60}
+            text="Manos que Crean, Piedras que Conectan"
+            speed={50}
             as="h1"
-            className="mb-6 text-5xl md:text-7xl text-[var(--vintage-cream)]"
+            className="mb-6 text-4xl sm:text-6xl md:text-7xl font-sans font-bold tracking-tight text-[var(--vintage-cream)] max-w-4xl mx-auto"
           />
 
-          <p className="text-xl md:text-2xl text-[var(--vintage-sepia)] mb-8 max-w-2xl mx-auto">
-            Artesanía en joyería fina, antigüedades con historia y restauración profesional de máquinas de escribir. Un taller donde el pasado cobra vida.
+          <p className="text-lg sm:text-xl md:text-2xl text-[var(--vintage-cream)]/90 mb-10 max-w-3xl mx-auto leading-relaxed font-sans">
+            Aros, collares y pulseras en alpaca y macramé con piedras de cuarzo y calipso. Creadas con amor por los ciclos del cultivo, la sincronía del calendario maya y el rescate de oficios nobles en el GAM.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <MagneticButton onClick={scrollToCatalog}>
-              <span className="group px-8 py-4 bg-[var(--vintage-gold)] text-[var(--vintage-dark)] rounded hover:bg-[var(--vintage-bronze)] transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl cursor-pointer">
-                <span>Ver Catálogo</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </MagneticButton>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-14">
+            <button
+              onClick={scrollToCatalog}
+              className="group px-8 py-4 bg-[var(--vintage-gold)] hover:bg-[var(--vintage-bronze)] text-[var(--vintage-dark)] font-semibold rounded-xl transition-all duration-200 flex items-center gap-2 shadow-xl hover:shadow-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-[var(--vintage-gold)]/50"
+            >
+              <span>Ver Creaciones Artesanales</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
 
-            <MagneticButton href={whatsappUrl}>
-              <span className="px-8 py-4 bg-transparent text-[var(--vintage-cream)] border-2 border-[var(--vintage-cream)]/50 rounded hover:bg-[var(--vintage-cream)]/10 transition-all duration-300 cursor-pointer">
-                Restaurar mi Máquina
-              </span>
-            </MagneticButton>
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-[var(--vintage-dark)]/60 hover:bg-[var(--vintage-dark)]/90 text-[var(--vintage-cream)] border-2 border-dashed border-[var(--vintage-cream)]/40 hover:border-[var(--vintage-gold)] rounded-xl backdrop-blur-sm transition-all duration-200 cursor-pointer font-medium focus:outline-none focus:ring-2 focus:ring-[var(--vintage-cream)]/40"
+            >
+              Conversar con la Artesana
+            </a>
           </div>
 
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-            {[
-              { to: 37, suffix: '+', label: 'Años de Experiencia' },
-              { to: 2400, suffix: '+', label: 'Piezas Restauradas' },
-              { to: 98, suffix: '%', label: 'Clientes Satisfechos' },
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1 + index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-3xl md:text-4xl text-[var(--vintage-gold)] mb-1 font-typewriter">
-                  <AnimatedCounter to={stat.to} suffix={stat.suffix} />
-                </div>
-                <div className="text-sm text-[var(--vintage-sepia)]">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
+          {/* Indicadores ligeros que no tapan la foto de la portada */}
+          <div className="flex flex-wrap justify-center items-center gap-2.5 sm:gap-5 max-w-3xl mx-auto pt-2 text-xs sm:text-sm font-sans">
+            <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-dashed border-[var(--vintage-gold)]/50 text-[var(--vintage-cream)] shadow-lg">
+              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+              <span>Piedras Calipso & Cuarzo</span>
+            </div>
+            <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-dashed border-[var(--vintage-gold)]/50 text-[var(--vintage-cream)] shadow-lg">
+              <Compass className="w-3.5 h-3.5 text-amber-400" />
+              <span>Cosmos & Calendario Maya</span>
+            </div>
+            <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-dashed border-[var(--vintage-gold)]/50 text-[var(--vintage-cream)] shadow-lg">
+              <HeartHandshake className="w-3.5 h-3.5 text-amber-400" />
+              <span>Artesanía Chilena en el GAM</span>
+            </div>
           </div>
         </motion.div>
       </motion.div>

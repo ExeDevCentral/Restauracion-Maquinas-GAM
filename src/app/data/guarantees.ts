@@ -7,39 +7,39 @@ export interface Guarantee {
 
 export const guarantees: Guarantee[] = [
   {
-    name: 'Oro & Plata Certificados',
+    name: 'Piedras Vivas & Cuarzos',
     icon: 'Gem',
     highlight: true,
-    description: 'Garantizamos la pureza y ley de los metales nobles (Oro 18k y Plata 925) de cada pieza.'
+    description: 'Cuarzo cristal, piedra calipso, lapislázuli chileno y amatistas engarzadas a mano con respeto por su energía viva.',
   },
   {
-    name: 'Historia Documentada',
+    name: 'Cosmos & Calendario Maya',
     icon: 'History',
     highlight: false,
-    description: 'Cada antigüedad incluye una ficha sobre su procedencia histórica y época.'
+    description: 'Inspiración en la sincronía del tiempo natural, los ciclos lunares y la observación paciente de las estrellas.',
   },
   {
-    name: 'Orfebrería Artesanal',
+    name: '100% Hecho a Mano en Chile',
     icon: 'Award',
     highlight: false,
-    description: 'Manufactura hecha a mano, rescatando técnicas y acabados de la joyería clásica.'
+    description: 'Aros, collares y pulseras tejidos y moldeados a mano en alpaca, cobre y macramé en nuestro rincón del GAM.',
   },
   {
-    name: 'Envíos Asegurados',
+    name: 'Tierra, Semilla & Cultivo',
     icon: 'Truck',
     highlight: false,
-    description: 'Despachos a todo el país con seguro de transporte integrado para resguardar tu compra.'
+    description: 'Amor y gratitud por la tierra chilena, sus brotes y los ciclos fértiles reflejados en cada detalle artesanal.',
   },
   {
-    name: 'Ajuste de Talla Gratis',
+    name: 'Amuletos con Alma Única',
     icon: 'Star',
     highlight: false,
-    description: 'En anillos seleccionados, el primer ajuste de medida es totalmente gratuito.'
+    description: 'Piezas irrepetibles creadas sin moldes ni apuros, hechas para acompañar tu energía y tu caminar cotidiano.',
   },
   {
-    name: 'Compra Protegida',
+    name: 'Rescate de Oficios & Máquinas',
     icon: 'ShieldCheck',
     highlight: false,
-    description: 'Pasarela segura de transacciones y cambios garantizados en un plazo de 15 días.'
+    description: 'Cuidado y mantención manual de máquinas de escribir históricas, honrando la memoria y la mecánica noble.',
   },
 ];

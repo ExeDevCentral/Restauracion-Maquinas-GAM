@@ -53,33 +53,33 @@ export function TypewriterSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="text-[var(--vintage-gold)] text-sm font-typewriter tracking-widest uppercase mb-2 block">
-              Restauración Profesional
+            <span className="text-[var(--vintage-gold)] text-sm font-sans font-semibold tracking-wider uppercase mb-2 block">
+              Rescate & Memoria Mecánica
             </span>
             <TypewriterText
-              text="Máquinas de Escribir"
+              text="Cuidado de Máquinas de Escribir"
               speed={40}
               as="h2"
-              className="text-3xl md:text-5xl text-[var(--vintage-cream)] mb-6"
+              className="text-3xl md:text-5xl font-sans font-bold tracking-tight text-[var(--vintage-cream)] mb-6"
             />
-            <p className="text-[var(--vintage-sepia)] mb-8 leading-relaxed">
-              Devolvemos la vida a las legendarias Olivetti, Remington, Underwood, Olympia, Hermes, Brother y Smith-Corona. Cada máquina es desmontada, limpiada, ajustada y calibrada a mano por artesanos especializados.
+            <p className="text-[var(--vintage-cream)]/85 mb-8 leading-relaxed font-sans">
+              Un oficio noble que también abrazamos en el taller con paciencia y cariño: realizamos mantención, limpieza manual y puesta a punto de máquinas de escribir históricas para que sus palabras sigan vivas.
             </p>
 
-            <div className="space-y-3 mb-8">
-              {services.map((item, index) => {
+            <div className="space-y-3 mb-8 font-sans">
+              {services.map((item) => {
                 const Icon = item.icon
                 return (
                   <motion.div
-                    key={index}
+                    key={item.label}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.3 + index * 0.08 }}
+                    transition={{ delay: 0.3 }}
                     className="flex items-center gap-3 text-[var(--vintage-cream)]"
                   >
                     <Icon className="w-5 h-5 text-[var(--vintage-gold)] flex-shrink-0" />
-                    <span className="text-sm">{item.label}</span>
+                    <span className="text-sm font-medium">{item.label}</span>
                   </motion.div>
                 )
               })}
@@ -89,9 +89,9 @@ export function TypewriterSection() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--vintage-gold)] text-[var(--vintage-dark)] rounded hover:bg-[var(--vintage-bronze)] transition-all duration-300 font-typewriter tracking-wide shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--vintage-gold)] text-[var(--vintage-dark)] font-semibold rounded-xl hover:bg-[var(--vintage-bronze)] transition-all font-sans tracking-wide shadow-lg hover:shadow-xl"
             >
-              Quiero restaurar mi máquina de escribir
+              Consultar Mantención con Cariño
             </a>
           </motion.div>
         </div>
