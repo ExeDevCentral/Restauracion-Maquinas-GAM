@@ -24,7 +24,7 @@ export default function App() {
   const whatsappUrl = buildWhatsAppUrl(BUSINESS_CONFIG.phone, BUSINESS_CONFIG.messages.restoration);
 
   return (
-    <div className="min-h-screen bg-[var(--vintage-paper)] text-[var(--vintage-dark)] selection:bg-[var(--vintage-gold)] selection:text-[var(--vintage-dark)]">
+    <div className="min-h-screen pb-24 md:pb-0 bg-[var(--vintage-paper)] text-[var(--vintage-dark)] selection:bg-[var(--vintage-gold)] selection:text-[var(--vintage-dark)]">
       <GrainOverlay />
       <ScrollProgress />
       <CursorSpotlight />
