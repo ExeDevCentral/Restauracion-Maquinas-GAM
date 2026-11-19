@@ -127,6 +127,9 @@ npm run build
 npm run preview
 ```
 
+### Mobile Artisan Ergonomics (`< 768px`)
+- **Minimalist Mobile Bottom Dock**: Replaces floating WhatsApp pills on mobile viewports with a 4-action thumb-zone dock (`Creaciones`, `Máquinas`, `Taller GAM`, `WhatsApp`) and safe bottom padding (`pb-24 md:pb-0`) ensuring zero overlap with catalog cards.
+
 ---
 
 ## 6. License
@@ -137,4 +140,4 @@ Distributed under the **MIT License**. Dedicated to the preservation of industri
   <sub>Preserved with mechanical devotion by <a href="https://github.com/ExeDevCentral">ExeDevCentral</a>.</sub>
 </div>
 
-<!-- ExeDevCentral Audit & Quality Stamp: 2026-11-14 (Phase 10/10) -->
+<!-- ExeDevCentral Audit & Quality Stamp: 2026-11-19 (Mobile UX & Zero-Overlap Verification) -->
